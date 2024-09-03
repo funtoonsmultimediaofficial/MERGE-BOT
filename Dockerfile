@@ -11,8 +11,7 @@ RUN apt-get -y update && apt-get -y upgrade && apt-get install apt-utils -y && \
 # RUN curl https://rclone.org/install.sh | bash
 
 COPY requirements.txt .
-RUN pip3 install -r requirements.txt
-
+RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 COPY . .
 
 RUN chmod +x start.sh
