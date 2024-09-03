@@ -11,7 +11,7 @@ RUN apt-get -y update && apt-get -y upgrade && apt-get install apt-utils -y && \
 RUN curl https://rclone.org/install.sh | bash
 
 COPY requirements.txt .
-RUN apt install python3 requirements.txt
+RUN requirements.txt
 
 COPY . .
 
